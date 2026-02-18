@@ -34,9 +34,9 @@
 <body class="min-h-screen max-w-md bg-base-200 mx-auto">
 
     <!-- header -->
-    <header class="border-b border-gray-300 ">
-        <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
-            <div class="left flex gap-2">
+    <header class="border-b border-gray-300 sticky top-0 bg-base-200 z-10 ">
+        <section class="w-11/12 mx-auto py-3 flex justify-between items-center ">
+            <div class="left flex gap-2 ">
                 <div class="w-[60px]">
                     <img src="./payoo-resources/assets/logo.png" alt="">
                 </div>
@@ -47,7 +47,8 @@
             </div>
 
             <div class="right">
-                <a href="/index.html" class="btn  rounded-xl text-neutral/50 font-light"><i class="fa-solid fa-arrow-right-from-bracket transform -scale-x-100"></i>Log Out</a>
+                <a href="/index.html" class="btn  rounded-xl text-neutral/50 font-light"><i
+                        class="fa-solid fa-arrow-right-from-bracket transform -scale-x-100"></i>Log Out</a>
             </div>
         </section>
     </header>
@@ -90,10 +91,51 @@
                 <img src="./payoo-resources/assets/opt-6.png" alt="">
                 <p class="text-neutral/60 font-medium">Transactions</p>
             </button>
-            
+
 
         </div>
     </section>
+
+    <!-- cashOut form -->
+    <section class="w-11/12 mx-auto">
+
+        <h1 class="text-xl font-semibold">Cash Out</h1>
+        <div>
+
+            <div id="cashout-form" class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+                <div class="card-body">
+                    <fieldset class="fieldset ">
+
+
+                        <label class="label text-neutral font-bold">Agent Number</label>
+                        <input id="cashout-number" maxlength="11" minlength="11" type="email"
+                            class="input rounded-full bg-base-200 border-none w-full" placeholder="Enter 11 digit number" />
+                        
+         
+
+                        <label class="label text-neutral font-bold">Amount</label>
+                        <input id="cashout-amount"  type="number"
+                            class="input rounded-full bg-base-200 border-none  w-full" placeholder="Enter amount to withdraw" />
+                        
+
+                        <label class="label text-neutral font-bold mt-2">Pin Number</label>
+                        <input id="cashout-pin" maxlength="4" type="password"
+                            class="input rounded-full bg-base-200 border-none  w-full"" placeholder="Enter 4 digit pin number" />
+
+
+                        <button id="withdraw-btn" class="btn btn-primary mt-4 primary rounded-full">Withdraw Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- js connect -->
+     <script src="./script/cashout.js"></script>
 </body>
 
 </html>
