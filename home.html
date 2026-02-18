@@ -72,7 +72,8 @@
                 <p class="text-neutral/60 font-medium">Cashout</p>
             </button>
             <!-- button -->
-            <button class="btn flex-col h-full py-4 rounded-xl">
+            <button onclick="showOne('transfer-money-form')" 
+                class="btn flex-col h-full py-4 rounded-xl">
                 <img src="./payoo-resources/assets/opt-3.png" alt="">
                 <p class="text-neutral/60 font-medium">Send Money</p>
             </button>
@@ -87,7 +88,7 @@
                 <p class="text-neutral/60 font-medium">Pay Bill</p>
             </button>
             <!-- button -->
-            <button class="btn flex-col h-full py-4 rounded-xl">
+            <button onclick="showOne('history')" class="btn flex-col h-full py-4 rounded-xl">
                 <img src="./payoo-resources/assets/opt-6.png" alt="">
                 <p class="text-neutral/60 font-medium">Transactions</p>
             </button>
@@ -96,8 +97,8 @@
         </div>
     </section>
 
+    
     <!-- add money form -->
-
     <section id="add-money-form" class="w-11/12 mx-auto hidden">
 
         <h1 class="text-xl font-semibold">Add Money</h1>
@@ -109,7 +110,8 @@
 
 
                         <label class="label text-neutral/70 font-bold">Select A Bank</label>
-                        <select id="add-money-bank" class="select text-neutral/70 rounded-full bg-base-200 border-none w-full">
+                        <select id="add-money-bank"
+                            class="select text-neutral/70 rounded-full bg-base-200 border-none w-full">
                             <option disabled selected>Select bank</option>
                             <option value="Islamic Bank">Islamic Bank</option>
                             <option value="City Bank">City Bank</option>
@@ -157,23 +159,23 @@
                     <fieldset class="fieldset ">
 
 
-                        <label class="label text-neutral font-bold">Agent Number</label>
+                        <label class="label text-neutral/70 font-bold">Agent Number</label>
                         <input id="cashout-number" maxlength="11" minlength="11" type="email"
                             class="input rounded-full bg-base-200 border-none w-full"
                             placeholder="Enter 11 digit number" />
 
 
 
-                        <label class="label text-neutral font-bold">Amount</label>
+                        <label class="label text-neutral/70 font-bold">Amount</label>
                         <input id="cashout-amount" type="number"
                             class="input rounded-full bg-base-200 border-none  w-full"
                             placeholder="Enter amount to withdraw" />
 
 
-                        <label class="label text-neutral font-bold mt-2">Pin Number</label>
+                        <label class="label text-neutral/70 font-bold mt-2">Pin Number</label>
                         <input id="cashout-pin" maxlength="4" type="password"
-                            class="input rounded-full bg-base-200 border-none  w-full"" placeholder=" Enter 4 digit pin
-                            number" />
+                            class="input rounded-full bg-base-200 border-none  w-full"
+                            placeholder=" Enter 4 digit pin number" />
 
 
                         <button id="withdraw-btn" class="btn btn-primary mt-4 primary rounded-full">Withdraw
@@ -185,12 +187,66 @@
     </section>
 
 
+    <!-- transfer money --> 
+    <section id="transfer-money-form" class="w-11/12 mx-auto hidden ">
 
+        <h1 class="text-xl font-semibold">Send Money</h1>
+        <div>
+
+            <div id="cashout-form" class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+                <div class="card-body">
+                    <fieldset class="fieldset ">
+
+
+                        <label class="label text-neutral/70 font-bold">User Account Number</label>
+                        <input id="transfer-money-number" maxlength="11" minlength="11" type="email"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter 11 digit number" />
+
+
+
+                        <label class="label text-neutral/70 font-bold">Amount</label>
+                        <input id="transfer-money-amount" type="number"
+                            class="input rounded-full bg-base-200 border-none  w-full"
+                            placeholder="Enter amount to withdraw" />
+
+
+                        <label class="label text-neutral/70 font-bold mt-2">Pin Number</label>
+                        <input id="transfer-money-pin" maxlength="4" type="password"
+                            class="input rounded-full bg-base-200 border-none  w-full"
+                            placeholder=" Enter 4 digit pin number" />
+
+
+                        <button id="transfer-btn" class="btn btn-primary mt-4 primary rounded-full">Send Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+
+    <!-- Transaction -->
+    <section id="history" class="w-11/12 mx-auto hidden">
+        <h1 class="text-xl font-semibold">Transaction History</h1>
+
+
+        <div id="history-container" class="mt-4 space-y-2">
+
+
+
+
+        </div>
+
+
+
+
+    </section>
 
 
     <!-- js connect -->
     <script src="./script/machine.js"></script>
     <script src="./script/addMoney.js"></script>
+    <script src="./script/transferMoney.js"></script>
     <script src="./script/cashout.js"></script>
 </body>
 
