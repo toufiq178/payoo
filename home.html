@@ -62,12 +62,12 @@
         <div class="grid grid-cols-3 gap-2 mt-8">
 
             <!-- button -->
-            <button class="btn flex-col h-full py-4 rounded-xl">
+            <button onclick="showOne('add-money-form')" class="btn flex-col h-full py-4 rounded-xl">
                 <img src="./payoo-resources/assets/opt-1.png" alt="">
                 <p class="text-neutral/60 font-medium">Add Money</p>
             </button>
             <!-- button -->
-            <button class="btn flex-col h-full py-4 rounded-xl">
+            <button onclick="showOne('cash-out-form')" class="btn flex-col h-full py-4 rounded-xl">
                 <img src="./payoo-resources/assets/opt-2.png" alt="">
                 <p class="text-neutral/60 font-medium">Cashout</p>
             </button>
@@ -98,7 +98,7 @@
 
     <!-- add money form -->
 
-    <section id="add-money-form" class="w-11/12 mx-auto">
+    <section id="add-money-form" class="w-11/12 mx-auto hidden">
 
         <h1 class="text-xl font-semibold">Add Money</h1>
         <div>
@@ -147,7 +147,7 @@
     </section>
 
     <!-- cashOut form -->
-    <section id="cash-out-form" class="w-11/12 mx-auto hidden">
+    <section id="cash-out-form" class="w-11/12 mx-auto hidden ">
 
         <h1 class="text-xl font-semibold">Cash Out</h1>
         <div>
