@@ -96,8 +96,58 @@
         </div>
     </section>
 
+    <!-- add money form -->
+
+    <section id="add-money-form" class="w-11/12 mx-auto">
+
+        <h1 class="text-xl font-semibold">Add Money</h1>
+        <div>
+
+            <div id="cashout-form" class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+                <div class="card-body">
+                    <fieldset class="fieldset ">
+
+
+                        <label class="label text-neutral/70 font-bold">Select A Bank</label>
+                        <select id="add-money-bank" class="select text-neutral/70 rounded-full bg-base-200 border-none w-full">
+                            <option disabled selected>Select bank</option>
+                            <option value="Islamic Bank">Islamic Bank</option>
+                            <option value="City Bank">City Bank</option>
+                            <option value="Rupali Bank">Rupali Bank</option>
+                        </select>
+
+                        <br>
+
+                        <label class="label text-neutral/70 font-bold">Bank Account Number</label>
+                        <input id="add-money-number" maxlength="11" minlength="11" type="email"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter 11 digit account number" />
+
+                        <br>
+
+                        <label class="label text-neutral/70 font-bold">Amount to Add</label>
+                        <input id="add-money-amount" type="number"
+                            class="input rounded-full bg-base-200 border-none  w-full"
+                            placeholder="Add Amount to withdraw" />
+
+                        <br>
+
+                        <label class="label text-neutral/70 font-bold mt-2">Pin Number</label>
+                        <input id="add-money-pin" maxlength="4" type="password"
+                            class="input rounded-full bg-base-200 border-none  w-full"" 
+                            placeholder=" Enter 4 digit pin number" />
+
+                        <br>
+
+                        <button id="add-money-btn" class="btn btn-primary mt-4 primary rounded-full">Add Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- cashOut form -->
-    <section class="w-11/12 mx-auto">
+    <section id="cash-out-form" class="w-11/12 mx-auto hidden">
 
         <h1 class="text-xl font-semibold">Cash Out</h1>
         <div>
@@ -122,7 +172,8 @@
 
                         <label class="label text-neutral font-bold mt-2">Pin Number</label>
                         <input id="cashout-pin" maxlength="4" type="password"
-                            class="input rounded-full bg-base-200 border-none  w-full"" placeholder=" Enter 4 digit pin number" />
+                            class="input rounded-full bg-base-200 border-none  w-full"" placeholder=" Enter 4 digit pin
+                            number" />
 
 
                         <button id="withdraw-btn" class="btn btn-primary mt-4 primary rounded-full">Withdraw
@@ -139,6 +190,7 @@
 
     <!-- js connect -->
     <script src="./script/machine.js"></script>
+    <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
 </body>
 

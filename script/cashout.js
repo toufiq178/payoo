@@ -9,16 +9,18 @@ document.getElementById('withdraw-btn').addEventListener("click", function(){
         alert('invalid number')
         return;
     }
+
     // 2 get amount
     const cashOutAmount = getInputById('cashout-amount');
-    console.log(cashOutAmount);
+
     
     // 3 calculate balance validate
-    const balanceElement = document.getElementById('balance');
-    const balance = balanceElement.innerText;
+    // const balanceElement = document.getElementById('balance');
+    // const balance = balanceElement.innerText;
 
-    const newBalance = Number(balance) - Number(cashOutAmount);
-    console.log(newBalance);
+    const currentBalance = getBalance();
+    const newBalance = currentBalance - Number(cashOutAmount);
+  
     
     if (newBalance < 0) {
         
@@ -31,7 +33,7 @@ document.getElementById('withdraw-btn').addEventListener("click", function(){
     if (cashOutPin === '1234') {
         
         alert('withdraw successful');
-        balanceElement.innerText = newBalance ;
+        setBalance(newBalance);
     }else{
 
         alert('invalid pin');
