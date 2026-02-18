@@ -31,12 +31,14 @@ function showOne(id) {
     const cashOut = document.getElementById('cash-out-form');
     const history = document.getElementById('history');
     const sendMoney = document.getElementById('transfer-money-form');
+    const payBiller = document.getElementById('pay-bill-form');
 
     // hide all
     addMoney.classList.add('hidden');
     cashOut.classList.add('hidden');
     history.classList.add('hidden');
     sendMoney.classList.add('hidden');
+    payBiller.classList.add('hidden');
 
     // if click me show me   
     const showOnly = document.getElementById(id);

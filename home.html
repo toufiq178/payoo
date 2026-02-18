@@ -72,8 +72,7 @@
                 <p class="text-neutral/60 font-medium">Cashout</p>
             </button>
             <!-- button -->
-            <button onclick="showOne('transfer-money-form')" 
-                class="btn flex-col h-full py-4 rounded-xl">
+            <button onclick="showOne('transfer-money-form')" class="btn flex-col h-full py-4 rounded-xl">
                 <img src="./payoo-resources/assets/opt-3.png" alt="">
                 <p class="text-neutral/60 font-medium">Send Money</p>
             </button>
@@ -83,7 +82,8 @@
                 <p class="text-neutral/60 font-medium">Get Bonus</p>
             </button>
             <!-- button -->
-            <button class="btn flex-col h-full py-4 rounded-xl">
+            <button onclick="showOne('pay-bill-form')"
+                class="btn flex-col h-full py-4 rounded-xl">
                 <img src="./payoo-resources/assets/opt-5.png" alt="">
                 <p class="text-neutral/60 font-medium">Pay Bill</p>
             </button>
@@ -97,14 +97,14 @@
         </div>
     </section>
 
-    
+
     <!-- add money form -->
     <section id="add-money-form" class="w-11/12 mx-auto hidden">
 
         <h1 class="text-xl font-semibold">Add Money</h1>
         <div>
 
-            <div id="cashout-form" class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+            <div  class="card bg-base-100 w-full  rounded-2xl mt-4 ">
                 <div class="card-body">
                     <fieldset class="fieldset ">
 
@@ -154,7 +154,7 @@
         <h1 class="text-xl font-semibold">Cash Out</h1>
         <div>
 
-            <div id="cashout-form" class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+            <div  class="card bg-base-100 w-full  rounded-2xl mt-4 ">
                 <div class="card-body">
                     <fieldset class="fieldset ">
 
@@ -187,13 +187,13 @@
     </section>
 
 
-    <!-- transfer money --> 
+    <!-- transfer money -->
     <section id="transfer-money-form" class="w-11/12 mx-auto hidden ">
 
         <h1 class="text-xl font-semibold">Send Money</h1>
         <div>
 
-            <div id="cashout-form" class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+            <div class="card bg-base-100 w-full  rounded-2xl mt-4 ">
                 <div class="card-body">
                     <fieldset class="fieldset ">
 
@@ -223,7 +223,58 @@
             </div>
         </div>
     </section>
- 
+
+    <!-- pay bill form -->
+    <section id="pay-bill-form" class="w-11/12 mx-auto hidden">
+
+        <h1 class="text-xl font-semibold">Pay Bill</h1>
+        <div>
+
+            <div  class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+                <div class="card-body">
+                    <fieldset class="fieldset ">
+
+
+                        <label class="label text-neutral/70 font-bold">Select To Pay</label>
+                        <select id="pay-bill"
+                            class="select text-neutral/70 rounded-full bg-base-200 border-none w-full">
+                            <option disabled selected>Select bank</option>
+                            <option value="Eclectic Bill">Eclectic Bill</option>
+                            <option value="Gas Bill">Gas Bill</option>
+                            <option value="Wifi Bill">Wifi Bill</option>
+                        </select>
+
+                        <br>
+
+                        <label class="label text-neutral/70 font-bold">Biller Account Number</label>
+                        <input id="biller-number" maxlength="11" minlength="11" type="email"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter account number" />
+
+                        <br>
+
+                        <label class="label text-neutral/70 font-bold">Amount to Pay</label>
+                        <input id="biller-amount" type="number"
+                            class="input rounded-full bg-base-200 border-none  w-full"
+                            placeholder="Add Amount to pay" />
+
+                        <br>
+
+                        <label class="label text-neutral/70 font-bold mt-2">Pin Number</label>
+                        <input id="biller-pin" maxlength="4" type="password"
+                            class="input rounded-full bg-base-200 border-none  w-full"" 
+                            placeholder=" Enter 4 digit pin number" />
+
+                        <br>
+
+                        <button id="pay-bill-btn" class="btn btn-primary mt-4 primary rounded-full">Pay Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Transaction -->
     <section id="history" class="w-11/12 mx-auto hidden">
@@ -245,6 +296,7 @@
 
     <!-- js connect -->
     <script src="./script/machine.js"></script>
+    <script src="./script/payBill.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/transferMoney.js"></script>
     <script src="./script/cashout.js"></script>
