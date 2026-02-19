@@ -77,7 +77,8 @@
                 <p class="text-neutral/60 font-medium">Send Money</p>
             </button>
             <!-- button -->
-            <button class="btn flex-col h-full py-4 rounded-xl">
+            <button onclick="showOne('get-bonus-form')"
+                class="btn flex-col h-full py-4 rounded-xl">
                 <img src="./payoo-resources/assets/opt-4.png" alt="">
                 <p class="text-neutral/60 font-medium">Get Bonus</p>
             </button>
@@ -224,6 +225,30 @@
         </div>
     </section>
 
+    <!-- Get Bonus -->
+    <section id="get-bonus-form" class="w-11/12 mx-auto hidden ">
+
+        <h1 class="text-xl font-semibold">Get Bonus</h1>
+        <div>
+
+            <div class="card bg-base-100 w-full  rounded-2xl mt-4 ">
+                <div class="card-body">
+                    <fieldset class="fieldset ">
+
+
+                        <label class="label text-neutral/70 font-bold">Enter Bonus Coupon</label>
+                        <input id="get-bonus-coupon" maxlength="11" minlength="11" type="email"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter your coupon" />
+
+
+                        <button id="get-bonus-btn" class="btn btn-primary mt-4 primary rounded-full">Get Bonus</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- pay bill form -->
     <section id="pay-bill-form" class="w-11/12 mx-auto hidden">
 
@@ -294,12 +319,15 @@
     </section>
 
 
+
+
     <!-- js connect -->
     <script src="./script/machine.js"></script>
+    <script src="./script/getBonus.js"></script>
     <script src="./script/payBill.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/transferMoney.js"></script>
     <script src="./script/cashout.js"></script>
-</body>
+</body> 
 
 </html>

@@ -32,6 +32,7 @@ function showOne(id) {
     const history = document.getElementById('history');
     const sendMoney = document.getElementById('transfer-money-form');
     const payBiller = document.getElementById('pay-bill-form');
+    const getBonus = document.getElementById('get-bonus-form');
 
     // hide all
     addMoney.classList.add('hidden');
@@ -39,6 +40,7 @@ function showOne(id) {
     history.classList.add('hidden');
     sendMoney.classList.add('hidden');
     payBiller.classList.add('hidden');
+    getBonus.classList.add('hidden');
 
     // if click me show me   
     const showOnly = document.getElementById(id);
@@ -67,4 +69,11 @@ function timeBd() {
     })
     
     return bdTime
+}
+
+// get parentage
+function getParentage(amount , parentage) {
+
+    const newAmount = amount + (amount * parentage / 100);
+    return newAmount;
 }
